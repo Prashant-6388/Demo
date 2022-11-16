@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home Page</title>
+        <script language="JavaScript" type="text/javascript" src="../js/jquery.min.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../js/welcome.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            $(function() {
+                console.log( "welcome to page !!!" );
+                console.log(getSomething());
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello !</h1>
+        <p>Welcome <span th:text="${username}"> </span> to our app</p>
+    </body>
+</html>

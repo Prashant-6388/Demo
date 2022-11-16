@@ -1,0 +1,14 @@
+{
+  "name": "webpack-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Demo webpack application",
+  "devDependencies": {
+    "webpack": "^3.3.12",
+    "webpack-cli": "^3.3.12",
+    "webpack-stream": "^5.2.1"
+  },
+  "scripts": {
+    "build": "webpack --mode production"
+  }
+}

@@ -5,8 +5,8 @@ const webpack = require('webpack');
 module.exports = {
     mode : 'development',
     entry : {
-        bundle : path.resolve(__dirname, './src/main/resources/static/js/common/jquery.min.js'),
-        welcome : path.resolve(__dirname, './src/main/resources/static/js/welcome.js')
+        bundle : '/src/main/resources/static/js/bundle.js',
+        welcome : '/src/main/resources/static/js/welcome.js'
     },
     output : {
         filename: "[name].js",

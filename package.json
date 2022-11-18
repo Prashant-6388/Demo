@@ -4,11 +4,18 @@
   "version": "1.0.0",
   "description": "Demo webpack application",
   "devDependencies": {
-    "webpack": "^3.3.12",
-    "webpack-cli": "^3.3.12",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.35.0",
+    "webpack-cli": "^4.6.0",
+    "bootstrap": "~4.5.0",
+    "bootstrap-loader": "^3.0.4",
+    "bootstrap-sass": "^3.4.1",
+    "css-loader": "^4.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   },
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack",
+    "dev-watch": "webpack --watch"
   }
 }

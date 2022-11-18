@@ -74,16 +74,17 @@
 						<goals>
 							<goal>npm</goal>
 						</goals>
+						<phase>generate-resources</phase>
 						<configuration>
 							<arguments>run build</arguments>
 						</configuration>
 					</execution>
-					<execution>
+					<!--<execution>
 						<id>webpack</id>
 						<goals>
 							<goal>webpack</goal>
 						</goals>
-					</execution>
+					</execution>-->
 				</executions>
 			</plugin>
 		</plugins>

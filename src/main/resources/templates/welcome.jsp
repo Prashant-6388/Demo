@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html>
 
+<html>
     <head>
         <title>Home Page</title>
-        <script language="JavaScript" type="text/javascript" src="../js/jquery.min.js"></script>
         <script language="JavaScript" type="text/javascript" src="../js/welcome.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/welcome.css" />
         <script language="JavaScript" type="text/javascript">
-            $(function() {
-                console.log( "welcome to page !!!" );
-                console.log(getSomething());
-            });
+
         </script>
     </head>
     <body>

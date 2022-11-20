@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import './start.js';
 
 function getSomething() {
     return "if you have called getSomething you will get something....";

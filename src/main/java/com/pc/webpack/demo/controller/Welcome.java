@@ -15,4 +15,5 @@ public class Welcome {
         model.addAttribute("username", user);
         return "welcome";
     }
+
 }

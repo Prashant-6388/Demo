@@ -4,15 +4,14 @@
   "version": "1.0.0",
   "description": "Demo webpack application",
   "devDependencies": {
-    "webpack": "^5.35.0",
-    "webpack-cli": "^4.6.0",
-    "bootstrap": "~4.5.0",
-    "bootstrap-loader": "^3.0.4",
-    "bootstrap-sass": "^3.4.1",
-    "css-loader": "^4.1.1"
+    "style-loader": "^3.3.1",
+    "css-loader": "^4.1.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.2"
   },
   "scripts": {
     "build": "webpack",

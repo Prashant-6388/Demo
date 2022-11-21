@@ -57,6 +57,6 @@ module.exports = {
             filename: "../css/[name].css",
             chunkFilename: "../css/[id].css",
         }),
-        new BundleAnalyzerPlugin()
+//        new BundleAnalyzerPlugin()
     ],
 }

@@ -15,7 +15,8 @@ module.exports = {
     output : {
         filename: "[name].js",
         path: path.join(__dirname, './target/classes/static/js'),
-        clean: true
+        clean: true,
+        assetModuleFilename : '../img/[hash][ext][query]'
     },
     module: {
         rules: [

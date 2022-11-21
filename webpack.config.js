@@ -3,16 +3,26 @@ const webpack = require('webpack');
 //const JspWebpackPlugin = require('jsp-webpack-plugin');
 
 module.exports = {
-    mode : 'development',
-    entry : {
-        bundle : '/src/main/resources/static/js/bundle.js',
-        welcome : '/src/main/resources/static/js/welcome.js'
+  mode: 'development',
+  entry: {
+    welcome: '/src/main/resources/static/js/welcome.js'
+  },
+  output: {
+    filename: "[name].js",
+    path: path.join(__dirname, './target/classes/static/js'),
+    clean: true
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        bundle: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'bundle',
+        },
+      },
     },
-    output : {
-        filename: "[name].js",
-        path: path.join(__dirname, './target/classes/static/js'),
-        clean: true
-    },
+  },
   module: {
     rules: [
       /*{

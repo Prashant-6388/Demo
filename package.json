@@ -4,10 +4,16 @@
   "version": "1.0.0",
   "description": "Demo webpack application",
   "devDependencies": {
-    "style-loader": "^3.3.1",
     "css-loader": "^4.1.1",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "mini-css-extract-plugin": "^2.7.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^4.6.0"
+    "webpack-bundle-analyzer": "^4.7.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "jquery": "^3.6.0",

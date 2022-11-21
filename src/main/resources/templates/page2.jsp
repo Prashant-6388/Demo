@@ -3,6 +3,7 @@
         <title>Home Page</title>
         <script language="JavaScript" type="text/javascript" src="../js/page2.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/welcome.css" />
+        <link rel="stylesheet" type="text/css" href="../css/page2.css" />
     </head>
     <body>
         <h1>Hello !</h1>

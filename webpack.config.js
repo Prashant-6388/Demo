@@ -1,5 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     mode : 'development',
@@ -15,15 +18,44 @@ module.exports = {
         clean: true
     },
     module: {
-    rules: [
-      {
-        test: /\.(css|scss)$/,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.(jpg|jpeg|png|svg)$/,
-        type: 'asset/resource'
-      }
-    ]
-  },
+        rules: [
+            {
+              test: /\.s[ac]ss$/i,
+              use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                'sass-loader'
+              ]
+            },
+            {
+                test: /\.css$/i,
+                use: [
+                  MiniCssExtractPlugin.loader,
+                  'css-loader'
+                ]
+            },
+            {
+                 test: /\.(jpg|jpeg|png|svg)$/,
+                 type: 'asset/resource'
+            }
+        ]
+    },
+    optimization: {
+       minimize: true,
+       minimizer: [
+         // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+//          `...`,
+         new CssMinimizerPlugin({
+               test: /\.css$/i,
+         }),
+       ],
+    },
+
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "../css/[name].css",
+            chunkFilename: "../css/[id].css",
+        }),
+        new BundleAnalyzerPlugin()
+    ],
 }
